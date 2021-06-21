@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/bootstrap-ar.min.css">
+  <link rel="stylesheet" href="./assets/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/scrollable.css">
+  <link rel="stylesheet" href="./assets/css/nice-select.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/cr-1.5.4/date-1.1.0/fc-3.3.3/fh-3.1.9/kt-2.6.2/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.4/sb-1.1.0/sp-1.3.0/sl-1.3.3/datatables.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- notification box -->
+  <div class="bg-sidenavOpen"></div>
+
+  <div class="Mysidebar">
+    <div class="logo">
+      <img src="./assets/images/logo.png" alt="">
+    </div>
+    <ul class="list-unstyled">
+      <li class="sideMenueParent">
+        <i class="fi-rr-portrait"></i>
+        <a>ادارة المستخدمين</a>
+        <ul class="sideMenue firstSideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-users"></i>
+            <a href="">المجموعات</a>
+          </li>
+          <li>
+            <i class="fi-rr-user"></i>
+            <a href="">المستخدمين</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sideMenueParent">
+        <i class="fi-rr-settings"></i>
+        <a>اعدادات النظام</a>
+        <ul class="sideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-subtitles"></i>
+            <a href="">المسميات الوظيفية</a>
+          </li>
+          <li>
+            <i class="fi-rr-spinner-alt"></i>
+            <a href="">حالات الطلب</a>
+          </li>
+          <li>
+            <i class="fi-rr-world"></i>
+            <a href="">الدول</a>
+          </li>
+          <li>
+            <i class="fi-rr-box"></i>
+            <a href="">الخدمات</a>
+          </li>
+          <li>
+            <i class="fi-rr-dart"></i>
+            <a href="">قطع الغيار</a>
+          </li>
+          <li>
+            <i class="fi-rr-diploma"></i>
+            <a href="">العروض</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sideMenueParent">
+        <i class="fi-rr-apps"></i>
+        <ul class="sideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-user-time"></i>
+            <a href="">العملاء</a>
+          </li>
+          <li>
+            <i class="fi-rr-broom"></i>
+            <a href="">الصيانة</a>
+          </li>
+          <li>
+            <i class="fi-rr-apps"></i>
+            <a href="">الطلبات</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sideMenueParent">
+        <i class="fi-rr-notebook"></i>
+        <a>التقارير</a>
+        <ul class="sideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-vector"></i>
+            <a href="">الفنيين</a>
+          </li>
+          <li>
+            <i class="fi-rr-earnings"></i>
+            <a href="">اكثر الاصناف مبيعا</a>
+          </li>
+          <li>
+            <i class="fi-rr-resize"></i>
+            <a href="">اكثر الخدمات طلبا</a>
+          </li>
+          <li>
+            <i class="fi-rr-time-check"></i>
+            <a href="">الطلبات المنتهية</a>
+          </li>
+          <li>
+            <i class="fi-rr-list-check"></i>
+            <a href="">طلبات الصيانة المنتهية</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="sidebarOptions">
+      <a href="">
+        <i class="fi-rr-apps-add"></i>
+        <span>عمل طلب</span>
+      </a>
+      <a href="">
+        <i class="fi-rr-pencil"></i>
+        <span>طلب صيانه</span>
+      </a>
+      <a href="">
+        <i class="fi-rr-user-add"></i>
+        <span>اضافة عميل</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="main-content">
+    <div class="top-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="searchbar">
+            <input type="text" name="" id="" class="form-control" placeholder="ابحث هنا ....">
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-8">
+          <div class="person-info">
+            <span class="notification">
+              <a class=""><i class="fi-rr-bell"></i></a>
+              <div class="notification-box">
+                <h5 class="notification-header">الاشعارات</h5>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+              </div>
+            </span>
+            <span class="persong-img" style="background-image: url('./assets/images/client_img.png');">
+              <div class="person-img-info">
+                <h5>Eng:Omar Ali</h5>
+                <ul class="links list-unstyled">
+                  <li></i><a href="">setting</a><i class="fi-rr-settings-sliders"></i></li>
+                  <li><a href="">sign out</a><i class="fi-rr-sign-out"></i></li>
+                </ul>
+              </div>
+            </span>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-header">
+      <h5>المستخدمين</h5>
+    </div>
+
+    <div class="users-table-parent orders-table">
+      <div class="users-table orderTable">
+        <div class="filter">
+          <form action="">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <select name="" id="" class="customSelect">
+                  <option value="" selected disabled>المحافظة</option>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <input type="text" name="" placeholder="الكود" id="" class="form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="add-new-user">
+          <a href="">
+            <i class="fas fa-plus"></i>
+            <span>اضافة</span>
+          </a>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-borderless responsive nowrap example" cellspacing="0" cellpadding="0" width="100%">
+            <thead>
+              <tr>
+                <th>الكود</th>
+                <th>الاسم</th>
+                <th>الهاتف</th>
+                <th>النوع</th>
+                <th>الموقع</th>
+                <th>الوظيفة</th>
+                <th>اختيارات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="orderNum">1</td>
+                <td class="name">Alphabet puzzle</td>
+                <td class="date">101098586783</td>
+                <td class="status">ذكر</td>
+                <td class="price">اسيوط</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
+                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">2</td>
+                <td class="name">Layout for poster</td>
+                <td class="date">2016/01/31</td>
+                <td class="status">Planned</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">3</td>
+                <td class="name">Image creation</td>
+                <td class="date">2016/01/23</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">4</td>
+                <td class="name">Create font</td>
+                <td class="date">2016/02/26</td>
+                <td class="status">Done</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">5</td>
+                <td class="name">Sticker production</td>
+                <td class="date">2016/02/18</td>
+                <td class="status">Planned</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">6</td>
+                <td class="name">Glossy poster</td>
+                <td class="date">2016/03/17</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">7</td>
+                <td class="name">Beer label</td>
+                <td class="date">2016/05/28</td>
+                <td class="status">Confirmed</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">8</td>
+                <td class="name">Shop sign</td>
+                <td class="date">2016/04/19</td>
+                <td class="status">Offer</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">9</td>
+                <td class="name">X-Mas decoration</td>
+                <td class="date">2016/10/31</td>
+                <td class="status">Confirmed</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">10</td>
+                <td class="name">Halloween invite</td>
+                <td class="date">2016/09/12</td>
+                <td class="status">Planned</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">11</td>
+                <td class="name">Wedding announcement</td>
+                <td class="date">2016/07/09</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">12</td>
+                <td class="name">Member pasport</td>
+                <td class="date">2016/06/22</td>
+                <td class="status">Offer</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">13</td>
+                <td class="name">Drink tickets</td>
+                <td class="date">2016/11/01</td>
+                <td class="status">Confirmed</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">14</td>
+                <td class="name">Album cover</td>
+                <td class="date">2017/03/15</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">15</td>
+                <td class="name">Shipment box</td>
+                <td class="date">2017/02/08</td>
+                <td class="status">Offer</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="orderNum">16</td>
+                <td class="name">Wooden puzzle</td>
+                <td class="date">2017/01/11</td>
+                <td class="status">Done</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">17</td>
+                <td class="name">Fashion Layout</td>
+                <td class="date">2016/01/30</td>
+                <td class="status">Planned</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">18</td>
+                <td class="name">Toy creation</td>
+                <td class="date">2016/01/10</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">19</td>
+                <td class="name">Create stamps</td>
+                <td class="date">2016/02/26</td>
+                <td class="status">Done</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">20</td>
+                <td class="name">Sticker design</td>
+                <td class="date">2017/02/18</td>
+                <td class="status">Planned</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">21</td>
+                <td class="name">Poster rock concert</td>
+                <td class="date">2017/04/17</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">22</td>
+                <td class="name">Wine label</td>
+                <td class="date">2017/05/28</td>
+                <td class="status">Confirmed</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">23</td>
+                <td class="name">Shopping bag</td>
+                <td class="date">2017/04/19</td>
+                <td class="status">Offer</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">24</td>
+                <td class="name">Decoration for Easter</td>
+                <td class="date">2017/10/31</td>
+                <td class="status">Confirmed</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">25</td>
+                <td class="name">Saint Nicolas colorbook</td>
+                <td class="date">2017/09/12</td>
+                <td class="status">Planned</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">26</td>
+                <td class="name">Wedding invites</td>
+                <td class="date">2017/07/09</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">27</td>
+                <td class="name">Member pasport</td>
+                <td class="date">2017/06/22</td>
+                <td class="status">Offer</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">28</td>
+                <td class="name">Drink tickets</td>
+                <td class="date">2017/11/01</td>
+                <td class="status">Confirmed</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">29</td>
+                <td class="name">Blue-Ray cover</td>
+                <td class="date">2018/03/15</td>
+                <td class="status">To Do</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="orderNum">30</td>
+                <td class="name">TV carton</td>
+                <td class="date">2019/02/08</td>
+                <td class="status">Offer</td>
+                <td class="price">اسوان</td>
+                <td class="price">عميل</td>
+                <td>
+                  <a href=""><i class="fi-rr-edit"></i></a>
+                  <a href=""><i class="fi-rr-trash"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/cr-1.5.4/date-1.1.0/fc-3.3.3/fh-3.1.9/kt-2.6.2/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.4/sb-1.1.0/sp-1.3.0/sl-1.3.3/datatables.min.js"></script>
+  <script src="./assets/js/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
