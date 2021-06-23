@@ -839,6 +839,101 @@ img {
   background-color: #ff3434 !important;
   border: 1px solid #ff3434 !important;
 }
+.main-content .follow-order-parent {
+  padding: 30px;
+  margin-top: -50px;
+}
+.main-content .follow-order-parent .follow-order {
+  background-color: #fff;
+  box-shadow: 0 12px 30px rgba(80, 143, 244, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  padding-bottom: 50px;
+}
+.main-content .follow-order-parent .follow-order .section-header {
+  text-align: center;
+}
+.main-content .follow-order-parent .follow-order .section-header h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.main-content .follow-order-parent .follow-order .section-header ul {
+  margin-top: 30px;
+}
+.main-content .follow-order-parent .follow-order .section-header ul li {
+  display: inline;
+  position: relative;
+}
+.main-content .follow-order-parent .follow-order .section-header ul li i {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #1dc078;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 47px;
+  color: #1dc078;
+  margin-bottom: 0;
+  font-size: 25px;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+.main-content .follow-order-parent .follow-order .section-header ul li i::after {
+  position: absolute;
+  content: "";
+  background-color: #a8b9b1;
+  width: 140px;
+  height: 5px;
+  bottom: 15px;
+  right: 46px;
+}
+.main-content .follow-order-parent .follow-order .section-header ul li span {
+  position: absolute;
+  right: 65px;
+  bottom: -37px;
+}
+.main-content .follow-order-parent .follow-order .section-header ul li:last-child i::after {
+  content: "" !important;
+  width: 0;
+}
+.main-content .follow-order-parent .follow-order .section-header ul .active i {
+  background-color: #1dc078;
+  color: #fff;
+}
+.main-content .follow-order-parent .follow-order .section-header ul .active i::after {
+  background-color: #1dc078;
+}
+.main-content .follow-order-parent .orders-table {
+  padding: 0 !important;
+  margin-top: 0;
+  margin-top: 20px;
+}
+.main-content .follow-order-parent .orders-table .tableHeead {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.main-content .follow-order-parent .orders-table thead th {
+  font-size: 13px;
+}
+.main-content .follow-order-parent .orders-table tbody tr td {
+  font-size: 15px;
+}
+.main-content .follow-order-parent .orders-table tbody tr td img {
+  width: 30px;
+}
+.main-content .technicalTable .orderTable tr td img {
+  width: 30px;
+}
+.main-content .technicalTable .orderTable tr td .dtr-data {
+  display: block;
+}
+.main-content .mostServOrders .orderTable tr td img {
+  width: 60px;
+}
 
 #chooseFixeModal .customSelect {
   float: none;

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/bootstrap-ar.min.css">
+  <link rel="stylesheet" href="./assets/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/scrollable.css">
+  <link rel="stylesheet" href="./assets/css/nice-select.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/cr-1.5.4/date-1.1.0/fc-3.3.3/fh-3.1.9/kt-2.6.2/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.4/sb-1.1.0/sp-1.3.0/sl-1.3.3/datatables.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- notification box -->
+  <div class="bg-sidenavOpen"></div>
+
+  <div class="Mysidebar">
+    <div class="logo">
+      <img src="./assets/images/logo.png" alt="">
+    </div>
+    <ul class="list-unstyled">
+      <li class="sideMenueParent">
+        <i class="fi-rr-portrait"></i>
+        <a>ادارة المستخدمين</a>
+        <ul class="sideMenue firstSideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-users"></i>
+            <a href="">المجموعات</a>
+          </li>
+          <li>
+            <i class="fi-rr-user"></i>
+            <a href="">المستخدمين</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sideMenueParent">
+        <i class="fi-rr-settings"></i>
+        <a>اعدادات النظام</a>
+        <ul class="sideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-subtitles"></i>
+            <a href="">المسميات الوظيفية</a>
+          </li>
+          <li>
+            <i class="fi-rr-spinner-alt"></i>
+            <a href="">حالات الطلب</a>
+          </li>
+          <li>
+            <i class="fi-rr-world"></i>
+            <a href="">الدول</a>
+          </li>
+          <li>
+            <i class="fi-rr-box"></i>
+            <a href="">الخدمات</a>
+          </li>
+          <li>
+            <i class="fi-rr-dart"></i>
+            <a href="">قطع الغيار</a>
+          </li>
+          <li>
+            <i class="fi-rr-diploma"></i>
+            <a href="">العروض</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sideMenueParent">
+        <i class="fi-rr-apps"></i>
+        <a>ادارة الطلبات</a>
+        <ul class="sideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-user-time"></i>
+            <a href="">العملاء</a>
+          </li>
+          <li>
+            <i class="fi-rr-broom"></i>
+            <a href="">الصيانة</a>
+          </li>
+          <li>
+            <i class="fi-rr-apps"></i>
+            <a href="">الطلبات</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sideMenueParent">
+        <i class="fi-rr-notebook"></i>
+        <a>التقارير</a>
+        <ul class="sideMenue list-unstyled">
+          <li>
+            <i class="fi-rr-vector"></i>
+            <a href="">الفنيين</a>
+          </li>
+          <li>
+            <i class="fi-rr-earnings"></i>
+            <a href="">اكثر الاصناف مبيعا</a>
+          </li>
+          <li>
+            <i class="fi-rr-resize"></i>
+            <a href="">اكثر الخدمات طلبا</a>
+          </li>
+          <li>
+            <i class="fi-rr-time-check"></i>
+            <a href="">الطلبات المنتهية</a>
+          </li>
+          <li>
+            <i class="fi-rr-list-check"></i>
+            <a href="">طلبات الصيانة المنتهية</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="sidebarOptions">
+      <a href="">
+        <i class="fi-rr-apps-add"></i>
+        <span>عمل طلب</span>
+      </a>
+      <a href="">
+        <i class="fi-rr-pencil"></i>
+        <span>طلب صيانه</span>
+      </a>
+      <a href="">
+        <i class="fi-rr-user-add"></i>
+        <span>اضافة عميل</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="top-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="searchbar">
+            <input type="text" name="" id="" class="form-control" placeholder="ابحث هنا ....">
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-8">
+          <div class="person-info">
+            <span class="notification">
+              <a class=""><i class="fi-rr-bell"></i></a>
+              <div class="notification-box">
+                <h5 class="notification-header">الاشعارات</h5>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+                <a href="" class="noti-card">
+                  <div class="card-img" style="background-image: url('./assets/images/client_img.png');"></div>
+                  <h5 class="card-title">تم اضافه هذا الطلب من قبل العميل كود D4df3</h5>
+                  <span class="date">
+                    <i></i>
+                    <span>منذ 3 ساعات</span>
+                  </span>
+                </a>
+              </div>
+            </span>
+            <span class="persong-img" style="background-image: url('./assets/images/client_img.png');">
+              <div class="person-img-info">
+                <h5>Eng:Omar Ali</h5>
+                <ul class="links list-unstyled">
+                  <li></i><a href="">setting</a><i class="fi-rr-settings-sliders"></i></li>
+                  <li><a href="">sign out</a><i class="fi-rr-sign-out"></i></li>
+                </ul>
+              </div>
+            </span>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-header">
+      <h5>الفنيين</h5>
+    </div>
+
+    
+    <div class="technicalTable orders-table">
+      <div class="orderTable">
+        <!-- <h5 class="tableHeead">قطع الغيار</h5> -->
+        <div class="filter">
+          <form action="">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                  <input type="text" name="" placeholder="الكود" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>الخدمة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>الحالة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>الفني</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>المدينة</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-borderless responsive nowrap example" cellspacing="0" cellpadding="0" width="100%">
+            <thead>
+              <th>لصورة</th>
+              <th>الاسم</th>
+              <th>الموقع</th>
+              <th>الخدمة</th>
+              <th>الحالة</th>
+              <th>المحافظة</th>
+              <th>صافي الدخل</th>
+              <th>التقييم</th>
+              <th>طلبات اليوم</th>
+              <th>اختيارات</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="./assets/images/Rc-540-12428-0121-7-4V-540.jpg" alt="">
+                </td>
+                <td>عمر علي سليمان</td>
+                <td>اسيوط</td>
+                <td>السخانات و البوتجازات	</td>
+                <td>غير مشغول</td>
+                <td>0</td>
+                <td>100</td>
+                <td>100</td>
+                <td>10</td>
+                <td><i class="fi-rr-edit"></i></td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/images/Rc-540-12428-0121-7-4V-540.jpg" alt="">
+                </td>
+                <td>عمر علي سليمان</td>
+                <td>اسيوط</td>
+                <td>السخانات و البوتجازات	</td>
+                <td>غير مشغول</td>
+                <td>0</td>
+                <td>100</td>
+                <td>100</td>
+                <td>10</td>
+                <td><i class="fi-rr-edit"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/cr-1.5.4/date-1.1.0/fc-3.3.3/fh-3.1.9/kt-2.6.2/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.4/sb-1.1.0/sp-1.3.0/sl-1.3.3/datatables.min.js"></script>
+  <script src="./assets/js/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
