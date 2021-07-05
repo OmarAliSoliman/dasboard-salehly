@@ -24,21 +24,11 @@
       <img src="./assets/images/logo.png" alt="">
     </div>
     <ul class="list-unstyled">
-      <li class="sideMenueParent">
+      <li class="liSide">
         <i class="fi-rr-portrait"></i>
-        <a>ادارة المستخدمين</a>
-        <ul class="sideMenue firstSideMenue list-unstyled">
-          <li>
-            <i class="fi-rr-users"></i>
-            <a href="">المجموعات</a>
-          </li>
-          <li>
-            <i class="fi-rr-user"></i>
-            <a href="">المستخدمين</a>
-          </li>
-        </ul>
+        <a href="">المستخدمين</a>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-settings"></i>
         <a>اعدادات النظام</a>
         <ul class="sideMenue list-unstyled">
@@ -68,7 +58,7 @@
           </li>
         </ul>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-apps"></i>
         <a>ادارة الطلبات</a>
         <ul class="sideMenue list-unstyled">
@@ -86,7 +76,7 @@
           </li>
         </ul>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-notebook"></i>
         <a>التقارير</a>
         <ul class="sideMenue list-unstyled">
@@ -116,15 +106,15 @@
     <div class="sidebarOptions">
       <a href="">
         <i class="fi-rr-apps-add"></i>
-        <span>عمل طلب</span>
-      </a>
-      <a href="">
-        <i class="fi-rr-pencil"></i>
-        <span>طلب صيانه</span>
+        <span>طلب قطع غيار</span>
       </a>
       <a href="">
         <i class="fi-rr-user-add"></i>
-        <span>اضافة عميل</span>
+        <span>اضافة فني / مورد</span>
+      </a>
+      <a href="">
+        <i class="fi-rr-user-add"></i>
+        <span>اضافة مستخدم</span>
       </a>
     </div>
   </div>
@@ -203,7 +193,7 @@
       <div class="dashboard-header">
         <h5>الرئيسية</h5>
       </div>
-      <!-- <div class="main-statistics">
+      <div class="main-statistics">
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="stati-card">
@@ -261,7 +251,7 @@
           </div> 
           
         </div>
-      </div> -->
+      </div>
 
       <div class="allcharts">
         <div class="row">
@@ -291,6 +281,87 @@
           <a href="">تحميل الان</a>
         </div>
       </div>
+
+      <div class="orders-table mt-0">
+        <div class="orderTable">
+          <div class="totalOfOrders">
+            <h5 class="text-center mb-3">الاجماليات</h5>
+            <div class="table-responsive">
+              <table class="table table-borderless responsive nowrap example" cellspacing="0" cellpadding="0" width="100%">
+                <thead>
+                  <th>الصورة</th>
+                  <th>الخدمة</th>
+                  <th>المبيعات</th>
+                  <th>المزيد</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-1.png" alt=""></td>
+                    <td>أجهزة كهربائية</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-2.png" alt=""></td>
+                    <td> التكييف والتبريد</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-3.png" alt=""></td>
+                    <td>الكهرباء</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-4.png" alt=""></td>
+                    <td>السخانات و البوتجازات</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-5.png" alt=""></td>
+                    <td>شاشات وتلفزيونات</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-6.png" alt=""></td>
+                    <td>الحدادة</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-7.png" alt=""></td>
+                    <td>السباكة</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-8.png" alt=""></td>
+                    <td>دش و ريسيفر</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-9.png" alt=""></td>
+                    <td>الالمونتال</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="td-img"><img src="./assets/images/serv-10.png" alt=""></td>
+                    <td>النجارة</td>
+                    <td>33</td>
+                    <td><i class="fi-rr-add"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

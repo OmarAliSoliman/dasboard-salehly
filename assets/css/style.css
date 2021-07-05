@@ -168,13 +168,13 @@ img {
   width: auto;
   height: auto;
 }
-.Mysidebar .sideMenueParent {
+.Mysidebar .liSide {
   margin-bottom: 20px;
   margin-top: 20px;
   position: relative;
   cursor: pointer;
 }
-.Mysidebar .sideMenueParent::after {
+.Mysidebar .liSide.sideMenueParent::after {
   position: absolute;
   content: "";
   left: 10px;
@@ -182,7 +182,7 @@ img {
   top: 5px;
   cursor: pointer;
 }
-.Mysidebar .sideMenueParent a {
+.Mysidebar .liSide a {
   font-size: 20px;
   cursor: pointer;
   color: #144339;
@@ -190,22 +190,22 @@ img {
   display: inline-block;
   position: relative;
 }
-.Mysidebar .sideMenueParent i {
+.Mysidebar .liSide i {
   font-size: 17px;
   color: #64c5b1;
   margin-left: 5px;
 }
-.Mysidebar .sideMenueParent .sideMenue {
+.Mysidebar .liSide .sideMenue {
   display: none;
 }
-.Mysidebar .sideMenueParent ul {
+.Mysidebar .liSide ul {
   margin-top: 15px;
   margin-right: 15px;
 }
-.Mysidebar .sideMenueParent ul li {
+.Mysidebar .liSide ul li {
   margin-bottom: 10px;
 }
-.Mysidebar .sideMenueParent ul li a {
+.Mysidebar .liSide ul li a {
   font-size: 17px;
   margin-bottom: 5px;
   display: inline-block;
@@ -613,10 +613,10 @@ img {
   padding: 30px;
   border-radius: 5px;
 }
-.main-content .users-table-parent .add-new-user {
+.main-content .add-new-user {
   margin-bottom: 20px;
 }
-.main-content .users-table-parent .add-new-user a {
+.main-content .add-new-user a {
   display: inline-block;
   width: 120px;
   height: 44px;
@@ -628,7 +628,7 @@ img {
   text-decoration: none;
   border-radius: 5px;
 }
-.main-content .users-table-parent .add-new-user i {
+.main-content .add-new-user i {
   font-size: 12px;
   margin-left: 3px;
 }
@@ -928,11 +928,11 @@ img {
 .main-content .technicalTable .orderTable tr td img {
   width: 30px;
 }
-.main-content .technicalTable .orderTable tr td .dtr-data {
-  display: block;
-}
 .main-content .mostServOrders .orderTable tr td img {
   width: 60px;
+}
+.main-content .totalOfOrders .td-img img {
+  width: 30px;
 }
 
 #chooseFixeModal .customSelect {
@@ -952,16 +952,259 @@ img {
   height: 50px;
 }
 
+.btn-submit-filter .btn-search i {
+  font-size: 12px;
+}
+
 .notification-active {
   visibility: visible !important;
   opacity: 1 !important;
   transform: translateY(-10px) !important;
 }
 
+.checkmarkForm-group {
+  margin-top: 10px;
+}
+
+.checkmarkContainer {
+  display: inline;
+  position: relative;
+  padding-right: 40px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmarkContainer .word-label {
+  font-size: 16px;
+  font-weight: normal;
+}
+.checkmarkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmarkContainer input:checked ~ .checkmark {
+  background-color: #64C5B1;
+  border: 1px solid #64C5B1;
+  border-radius: 5px;
+}
+.checkmarkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkmarkContainer .checkmark {
+  border-radius: 5px;
+}
+.checkmarkContainer .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 8px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkmark {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border: 1px solid #bebebe;
+  border-radius: 2px;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.clocketTime::placeholder {
+  font-size: 14px !important;
+}
+
+/* minute - dial, hand, selected tick, hovered tick */
+.clocklet-color-example .clocklet-dial--minute {
+  background-color: #fcf0e8;
+}
+
+.clocklet-color-example .clocklet-hand--minute {
+  background-color: #f5bb95;
+}
+
+.clocklet-color-example .clocklet-tick--minute.clocklet-tick--selected {
+  background-color: #f2a470;
+}
+
+.clocklet-color-example.clocklet--hoverable:not(.clocklet--dragging) .clocklet-tick--minute:hover {
+  background-color: #f5bb95;
+}
+
+/* hour - dial, hand, selected tick, hovered tick */
+.clocklet-color-example .clocklet-dial--hour {
+  background-color: #e9fdf1;
+}
+
+.clocklet-color-example .clocklet-hand--hour {
+  background-color: #98f5bd;
+}
+
+.clocklet-color-example .clocklet-tick--hour.clocklet-tick--selected {
+  background-color: #44ee88;
+}
+
+.clocklet-color-example.clocklet--hoverable:not(.clocklet--dragging) .clocklet-tick--hour:hover {
+  background-color: #98f5bd;
+}
+
+/* hand origin */
+.clocklet-color-example .clocklet-hand-origin {
+  background-color: #f1e369;
+}
+
+/* ampm */
+.clocklet-color-example .clocklet-ampm::before {
+  background-color: #44eedd;
+}
+
+.clocklet-color-example .clocklet-ampm:hover::before {
+  background-color: #97f5ec;
+}
+
+.clocklet-color-example .clocklet-ampm[data-clocklet-ampm=pm]::before {
+  background-color: #dd44ee;
+}
+
+.clocklet-color-example .clocklet-ampm[data-clocklet-ampm=pm]:hover::before {
+  background-color: #eda1f6;
+}
+
+.btn-submit-filter {
+  text-align: center;
+}
+.btn-submit-filter .btn-search {
+  background-color: #144339;
+  border: 2px solid #144339;
+  color: #fff;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+.drop-zone {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 1px dashed #d4d9dc;
+  border-radius: 10px;
+  background-color: #f3f4f5;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__prompt {
+  font-size: 14px;
+  color: #002543;
+}
+.drop-zone__prompt i {
+  color: #002543;
+  font-size: 20px;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+
+#delete-user .modal-body,
+#delete-blog .modal-body {
+  text-align: center;
+}
+#delete-user .modal-body i,
+#delete-blog .modal-body i {
+  font-size: 25px;
+  color: #ddd;
+}
+#delete-user .modal-body h5,
+#delete-blog .modal-body h5 {
+  color: #262b40;
+  margin-top: 10px;
+}
+#delete-user .modal-body .btn,
+#delete-blog .modal-body .btn {
+  background-color: #144339;
+  color: #fff;
+}
+
+#order-complete h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#order-complete .form-control {
+  height: 50px;
+}
+#order-complete a {
+  background-color: #144339;
+  color: #fff;
+  padding: 10px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border: 1px solid #144339;
+  text-decoration: none;
+}
+#order-complete a:hover {
+  background-color: #fff;
+  color: #144339;
+}
+
+a {
+  cursor: pointer;
+}
+
 /* Small Screens */
 /* Mobile & Tablets */
 /* Tablets */
-.Mysidebar .sideMenueParent::after, .main-content .top-header .person-info .persong-img .person-img-info h5::before {
+.Mysidebar .liSide.sideMenueParent::after, .main-content .top-header .person-info .persong-img .person-img-info h5::before {
   font-family: uicons-regular-rounded !important;
   font-style: normal;
   font-weight: normal !important;
@@ -989,7 +1232,7 @@ img {
   -webkit-box-orient: vertical;
 }
 
-.iMenue::after, .Mysidebar .sidebarOptions a, .main-content, .main-content .top-header .person-info .notification .notification-box, .main-content .top-header .person-info .persong-img .person-img-info, .main-content .report .card-rebort a, .main-content .addNewFix-Parent .btn-submit button, .main-content .activeUser .container input:checked ~ .checkmark, .main-content .activeUser .container .checkmark, .main-content .new-order .cardForm .btn-submit button {
+.iMenue::after, .Mysidebar .sidebarOptions a, .main-content, .main-content .top-header .person-info .notification .notification-box, .main-content .top-header .person-info .persong-img .person-img-info, .main-content .report .card-rebort a, .main-content .addNewFix-Parent .btn-submit button, .main-content .activeUser .container input:checked ~ .checkmark, .main-content .activeUser .container .checkmark, .main-content .new-order .cardForm .btn-submit button, .checkmarkContainer input:checked ~ .checkmark, .checkmarkContainer .checkmark, #order-complete a {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

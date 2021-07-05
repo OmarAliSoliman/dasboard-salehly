@@ -25,21 +25,11 @@
       <img src="./assets/images/logo.png" alt="">
     </div>
     <ul class="list-unstyled">
-      <li class="sideMenueParent">
+      <li class="liSide">
         <i class="fi-rr-portrait"></i>
-        <a>ادارة المستخدمين</a>
-        <ul class="sideMenue firstSideMenue list-unstyled">
-          <li>
-            <i class="fi-rr-users"></i>
-            <a href="">المجموعات</a>
-          </li>
-          <li>
-            <i class="fi-rr-user"></i>
-            <a href="">المستخدمين</a>
-          </li>
-        </ul>
+        <a href="">المستخدمين</a>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-settings"></i>
         <a>اعدادات النظام</a>
         <ul class="sideMenue list-unstyled">
@@ -69,8 +59,9 @@
           </li>
         </ul>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-apps"></i>
+        <a>ادارة الطلبات</a>
         <ul class="sideMenue list-unstyled">
           <li>
             <i class="fi-rr-user-time"></i>
@@ -86,7 +77,7 @@
           </li>
         </ul>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-notebook"></i>
         <a>التقارير</a>
         <ul class="sideMenue list-unstyled">
@@ -116,15 +107,15 @@
     <div class="sidebarOptions">
       <a href="">
         <i class="fi-rr-apps-add"></i>
-        <span>عمل طلب</span>
-      </a>
-      <a href="">
-        <i class="fi-rr-pencil"></i>
-        <span>طلب صيانه</span>
+        <span>طلب قطع غيار</span>
       </a>
       <a href="">
         <i class="fi-rr-user-add"></i>
-        <span>اضافة عميل</span>
+        <span>اضافة فني / مورد</span>
+      </a>
+      <a href="">
+        <i class="fi-rr-user-add"></i>
+        <span>اضافة مستخدم</span>
       </a>
     </div>
   </div>
@@ -210,12 +201,47 @@
           <form action="">
             <div class="row">
               <div class="col-sm-12 col-md-6 col-lg-6">
-                <select name="" id="" class="customSelect">
-                  <option value="" selected disabled>المحافظة</option>
-                </select>
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>الاسم</option>
+                  </select>
+                </div>
               </div>
               <div class="col-sm-12 col-md-6 col-lg-6">
-                <input type="text" name="" placeholder="الكود" id="" class="form-control">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>المحافظة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>رقم الهاتف</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                  <input type="text" name="" placeholder="الكود" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6 ">
+                <div class="form-group checkmarkForm-group">
+                  <label class="container checkmarkContainer">
+                    <span class="word-label">نشط</a> </span>
+                    <input type="checkbox" name="fix-peace" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <div class="btn-submit-filter">
+                  <a href="" class="btn-search">
+                    بحث
+                    <i class="fas fa-search"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </form>
@@ -233,7 +259,6 @@
                 <th>الكود</th>
                 <th>الاسم</th>
                 <th>الهاتف</th>
-                <th>النوع</th>
                 <th>الموقع</th>
                 <th>الوظيفة</th>
                 <th>اختيارات</th>
@@ -244,180 +269,165 @@
                 <td class="orderNum">1</td>
                 <td class="name">Alphabet puzzle</td>
                 <td class="date">101098586783</td>
-                <td class="status">ذكر</td>
-                <td class="price">اسيوط</td>
+                <td class="price">٢ ش أحمد جمال الدين متفرع من ش الجمهورية سوهاج</td>
                 <td class="price">عميل</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a href="" title="تعديل"><i class="fi-rr-edit"></i></a>
+                  <a  data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">2</td>
                 <td class="name">Layout for poster</td>
                 <td class="date">2016/01/31</td>
-                <td class="status">Planned</td>
-                <td class="price">اسوان</td>
+                <td class="price">شارع مدرسه عرب الاطاوله - طريق اخميم /سوهاج - سوهاج</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">3</td>
                 <td class="name">Image creation</td>
                 <td class="date">2016/01/23</td>
-                <td class="status">To Do</td>
-                <td class="price">اسوان</td>
+                <td class="price">ش ابوبكر الصديق متفرع من ش مؤمن الخطاط مدينة ناصر سوهاج	</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">4</td>
                 <td class="name">Create font</td>
                 <td class="date">2016/02/26</td>
-                <td class="status">Done</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">5</td>
                 <td class="name">Sticker production</td>
                 <td class="date">2016/02/18</td>
-                <td class="status">Planned</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">6</td>
                 <td class="name">Glossy poster</td>
                 <td class="date">2016/03/17</td>
-                <td class="status">To Do</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">7</td>
                 <td class="name">Beer label</td>
                 <td class="date">2016/05/28</td>
-                <td class="status">Confirmed</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">8</td>
                 <td class="name">Shop sign</td>
                 <td class="date">2016/04/19</td>
-                <td class="status">Offer</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">9</td>
                 <td class="name">X-Mas decoration</td>
                 <td class="date">2016/10/31</td>
-                <td class="status">Confirmed</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">10</td>
                 <td class="name">Halloween invite</td>
                 <td class="date">2016/09/12</td>
-                <td class="status">Planned</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">11</td>
                 <td class="name">Wedding announcement</td>
                 <td class="date">2016/07/09</td>
-                <td class="status">To Do</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">12</td>
                 <td class="name">Member pasport</td>
                 <td class="date">2016/06/22</td>
-                <td class="status">Offer</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">13</td>
                 <td class="name">Drink tickets</td>
                 <td class="date">2016/11/01</td>
-                <td class="status">Confirmed</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">14</td>
                 <td class="name">Album cover</td>
                 <td class="date">2017/03/15</td>
-                <td class="status">To Do</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">15</td>
                 <td class="name">Shipment box</td>
                 <td class="date">2017/02/08</td>
-                <td class="status">Offer</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
 
@@ -425,180 +435,165 @@
                 <td class="orderNum">16</td>
                 <td class="name">Wooden puzzle</td>
                 <td class="date">2017/01/11</td>
-                <td class="status">Done</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">17</td>
                 <td class="name">Fashion Layout</td>
                 <td class="date">2016/01/30</td>
-                <td class="status">Planned</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">18</td>
                 <td class="name">Toy creation</td>
                 <td class="date">2016/01/10</td>
-                <td class="status">To Do</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">19</td>
                 <td class="name">Create stamps</td>
                 <td class="date">2016/02/26</td>
-                <td class="status">Done</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">20</td>
                 <td class="name">Sticker design</td>
                 <td class="date">2017/02/18</td>
-                <td class="status">Planned</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">21</td>
                 <td class="name">Poster rock concert</td>
                 <td class="date">2017/04/17</td>
-                <td class="status">To Do</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">22</td>
                 <td class="name">Wine label</td>
                 <td class="date">2017/05/28</td>
-                <td class="status">Confirmed</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">23</td>
                 <td class="name">Shopping bag</td>
                 <td class="date">2017/04/19</td>
-                <td class="status">Offer</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">24</td>
                 <td class="name">Decoration for Easter</td>
                 <td class="date">2017/10/31</td>
-                <td class="status">Confirmed</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">25</td>
                 <td class="name">Saint Nicolas colorbook</td>
                 <td class="date">2017/09/12</td>
-                <td class="status">Planned</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">26</td>
                 <td class="name">Wedding invites</td>
                 <td class="date">2017/07/09</td>
-                <td class="status">To Do</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">27</td>
                 <td class="name">Member pasport</td>
                 <td class="date">2017/06/22</td>
-                <td class="status">Offer</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">28</td>
                 <td class="name">Drink tickets</td>
                 <td class="date">2017/11/01</td>
-                <td class="status">Confirmed</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">29</td>
                 <td class="name">Blue-Ray cover</td>
                 <td class="date">2018/03/15</td>
-                <td class="status">To Do</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
               <tr>
                 <td class="orderNum">30</td>
                 <td class="name">TV carton</td>
                 <td class="date">2019/02/08</td>
-                <td class="status">Offer</td>
                 <td class="price">اسوان</td>
                 <td class="price">عميل</td>
                 <td>
                   <a href=""><i class="fi-rr-edit"></i></a>
-                  <a href=""><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#delete-user"><i class="fi-rr-trash"></i></a>
                 </td>
               </tr>
             </tbody>
@@ -606,7 +601,20 @@
         </div>
       </div>
     </div>
+  </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="delete-user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body ">
+          <i class="fas fa-trash"></i>
+          <h5>هل تريد الحدف بالتاكيد</h5>
+          <a href="" class="btn">نعم</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="./assets/js/jquery-3.3.1.min.js"></script>

@@ -27,21 +27,11 @@
       <img src="./assets/images/logo.png" alt="">
     </div>
     <ul class="list-unstyled">
-      <li class="sideMenueParent">
+      <li class="liSide">
         <i class="fi-rr-portrait"></i>
-        <a>ادارة المستخدمين</a>
-        <ul class="sideMenue firstSideMenue list-unstyled">
-          <li>
-            <i class="fi-rr-users"></i>
-            <a href="">المجموعات</a>
-          </li>
-          <li>
-            <i class="fi-rr-user"></i>
-            <a href="">المستخدمين</a>
-          </li>
-        </ul>
+        <a href="">المستخدمين</a>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-settings"></i>
         <a>اعدادات النظام</a>
         <ul class="sideMenue list-unstyled">
@@ -71,7 +61,7 @@
           </li>
         </ul>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-apps"></i>
         <a>ادارة الطلبات</a>
         <ul class="sideMenue list-unstyled">
@@ -89,7 +79,7 @@
           </li>
         </ul>
       </li>
-      <li class="sideMenueParent">
+      <li class="liSide sideMenueParent">
         <i class="fi-rr-notebook"></i>
         <a>التقارير</a>
         <ul class="sideMenue list-unstyled">
@@ -119,15 +109,15 @@
     <div class="sidebarOptions">
       <a href="">
         <i class="fi-rr-apps-add"></i>
-        <span>عمل طلب</span>
-      </a>
-      <a href="">
-        <i class="fi-rr-pencil"></i>
-        <span>طلب صيانه</span>
+        <span>طلب قطع غيار</span>
       </a>
       <a href="">
         <i class="fi-rr-user-add"></i>
-        <span>اضافة عميل</span>
+        <span>اضافة فني / مورد</span>
+      </a>
+      <a href="">
+        <i class="fi-rr-user-add"></i>
+        <span>اضافة مستخدم</span>
       </a>
     </div>
   </div>
@@ -203,384 +193,410 @@
       </div>
     </div>
     <div class="dashboard-header">
-      <h5>الطلبات</h5>
+      <h5>طلبات قطع الغيار</h5>
     </div>
 
     <div class="orders-table">
       <div class="orderTable">
+        <h5 class="mb-3 text-center font-weight-bold h4">لم يتم التعيين</h5>
+        <div class="filter">
+          <form action="">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>حالة الطلب</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>الفني</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>العميل</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>المدينة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>المدة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <input type="text" name="" placeholder="الكود" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <div class="btn-submit-filter mt-2 mb-2">
+                  <a href="" class="btn-search">
+                    بحث
+                    <i class="fas fa-search"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="add-new-user">
+          <a href="">
+            <i class="fas fa-plus"></i>
+            <span>اضافة طلب</span>
+          </a>
+        </div>
         <div class="table-responsive">
           <table id="" class="table table-borderless responsive nowrap example" cellspacing="0" cellpadding="0"
             width="100%">
             <thead>
               <tr>
-                <th>الترتيب</th>
-                <th>اسم الطلب</th>
+                <th>الكود</th>
+                <th>العميل</th>
+                <th>الحالة</th>
+                <th>العدد</th>
+                <th>الاجمالي</th>
+                <th>التقييم</th>
+                <th>مورد</th>
                 <th>تاريخ الطلب</th>
-                <th>حالة الطلب</th>
-                <th>تكلفة الطلب</th>
+                <th>تاريخ التوصيل</th>
                 <th>اختيارات</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="orderNum">1</td>
-                <td class="name">Alphabet puzzle</td>
-                <td class="date">2016/01/15</td>
-                <td class="status">Done</td>
-                <td class="price" data-order="1000">€1.000,00</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a>
+                  <!-- <span>عمر علي سليمان</span> -->
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">2</td>
-                <td class="name">Layout for poster</td>
-                <td class="date">2016/01/31</td>
-                <td class="status">Planned</td>
-                <td class="price" data-order="1834">€1.834,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a>
+                  <!-- <span>عمر علي سليمان</span> -->
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">3</td>
-                <td class="name">Image creation</td>
-                <td class="date">2016/01/23</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="1500">€1.500,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a>
+                  <!-- <span>عمر علي سليمان</span> -->
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">4</td>
-                <td class="name">Create font</td>
-                <td class="date">2016/02/26</td>
-                <td class="status">Done</td>
-                <td class="price" data-order="1200">€1.200,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a>
+                  <!-- <span>عمر علي سليمان</span> -->
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">5</td>
-                <td class="name">Sticker production</td>
-                <td class="date">2016/02/18</td>
-                <td class="status">Planned</td>
-                <td class="price" data-order="2100">€2.100,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a>
+                  <!-- <span>عمر علي سليمان</span> -->
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
-              <tr>
-                <td class="orderNum">6</td>
-                <td class="name">Glossy poster</td>
-                <td class="date">2016/03/17</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="899">€899,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">7</td>
-                <td class="name">Beer label</td>
-                <td class="date">2016/05/28</td>
-                <td class="status">Confirmed</td>
-                <td class="price" data-order="2499">€2.499,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">8</td>
-                <td class="name">Shop sign</td>
-                <td class="date">2016/04/19</td>
-                <td class="status">Offer</td>
-                <td class="price" data-order="1099">€1.099,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">9</td>
-                <td class="name">X-Mas decoration</td>
-                <td class="date">2016/10/31</td>
-                <td class="status">Confirmed</td>
-                <td class="price" data-order="1750">€1.750,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">10</td>
-                <td class="name">Halloween invite</td>
-                <td class="date">2016/09/12</td>
-                <td class="status">Planned</td>
-                <td class="price" data-order="400">€400,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">11</td>
-                <td class="name">Wedding announcement</td>
-                <td class="date">2016/07/09</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="299">€299,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">12</td>
-                <td class="name">Member pasport</td>
-                <td class="date">2016/06/22</td>
-                <td class="status">Offer</td>
-                <td class="price" data-order="149">€149,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">13</td>
-                <td class="name">Drink tickets</td>
-                <td class="date">2016/11/01</td>
-                <td class="status">Confirmed</td>
-                <td class="price" data-order="199">€199,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">14</td>
-                <td class="name">Album cover</td>
-                <td class="date">2017/03/15</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="4999">€4.999,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">15</td>
-                <td class="name">Shipment box</td>
-                <td class="date">2017/02/08</td>
-                <td class="status">Offer</td>
-                <td class="price" data-order="1399">€1.399,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
+
+    
+    <div class="orders-table mt-2">
+      <div class="orderTable">
+        <h5 class="mb-3 text-center font-weight-bold h4"> تم التعيين</h5>
+        <div class="table-responsive">
+          <table id="" class="table table-borderless responsive nowrap example" cellspacing="0" cellpadding="0"
+            width="100%">
+            <thead>
               <tr>
-                <td class="orderNum">16</td>
-                <td class="name">Wooden puzzle</td>
-                <td class="date">2017/01/11</td>
-                <td class="status">Done</td>
-                <td class="price" data-order="1000">€1.000,00</td>
+                <th>الكود</th>
+                <th>العميل</th>
+                <th>الحالة</th>
+                <th>العدد</th>
+                <th>الاجمالي</th>
+                <th>التقييم</th>
+                <th>مورد</th>
+                <th>تاريخ الطلب</th>
+                <th>تاريخ التوصيل</th>
+                <th>اختيارات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">17</td>
-                <td class="name">Fashion Layout</td>
-                <td class="date">2016/01/30</td>
-                <td class="status">Planned</td>
-                <td class="price" data-order="1834">€1.834,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">18</td>
-                <td class="name">Toy creation</td>
-                <td class="date">2016/01/10</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="1550">€1.550,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">19</td>
-                <td class="name">Create stamps</td>
-                <td class="date">2016/02/26</td>
-                <td class="status">Done</td>
-                <td class="price" data-order="1220">€1.220,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">20</td>
-                <td class="name">Sticker design</td>
-                <td class="date">2017/02/18</td>
-                <td class="status">Planned</td>
-                <td class="price" data-order="2100">€2.100,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a data-toggle="modal" data-target="#order-complete"><i class="fi-rr-file-check"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="orders-table mt-2">
+      <div class="orderTable">
+        <h5 class="mb-3 text-center font-weight-bold h4">المنتهية</h5>
+        <div class="table-responsive">
+          <table id="" class="table table-borderless responsive nowrap example" cellspacing="0" cellpadding="0"
+            width="100%">
+            <thead>
+              <tr>
+                <th>الكود</th>
+                <th>العميل</th>
+                <th>الحالة</th>
+                <th>العدد</th>
+                <th>الاجمالي</th>
+                <th>التقييم</th>
+                <th>مورد</th>
+                <th>تاريخ الطلب</th>
+                <th>تاريخ التوصيل</th>
+                <th>اختيارات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">21</td>
-                <td class="name">Poster rock concert</td>
-                <td class="date">2017/04/17</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="899">€899,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">22</td>
-                <td class="name">Wine label</td>
-                <td class="date">2017/05/28</td>
-                <td class="status">Confirmed</td>
-                <td class="price" data-order="2799">€2.799,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">23</td>
-                <td class="name">Shopping bag</td>
-                <td class="date">2017/04/19</td>
-                <td class="status">Offer</td>
-                <td class="price" data-order="1299">€1.299,00</td>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
+                </td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
               <tr>
-                <td class="orderNum">24</td>
-                <td class="name">Decoration for Easter</td>
-                <td class="date">2017/10/31</td>
-                <td class="status">Confirmed</td>
-                <td class="price" data-order="1650">€1.650,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                <td class="orderNum">1</td>
+                <td class="name">عمر علي سليمان</td>
+                <td class="date">استلمها الفني</td>
+                <td class="status">1</td>
+                <td class="status">50ج</td>
+                <td class="price">5</td>
+                <td class="fixer">
+                  <!-- <a data-toggle="modal" data-target="#chooseFixeModal">تعيين فني</a> -->
+                  <span>عمر علي سليمان</span>
                 </td>
-              </tr>
-              <tr>
-                <td class="orderNum">25</td>
-                <td class="name">Saint Nicolas colorbook</td>
-                <td class="date">2017/09/12</td>
-                <td class="status">Planned</td>
-                <td class="price" data-order="510">€510,00</td>
+                <td class="date">20/10/2021 - 10:30</td>
+                <td class="date">20/10/2021 - 10:30</td>
                 <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">26</td>
-                <td class="name">Wedding invites</td>
-                <td class="date">2017/07/09</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="399">€399,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">27</td>
-                <td class="name">Member pasport</td>
-                <td class="date">2017/06/22</td>
-                <td class="status">Offer</td>
-                <td class="price" data-order="249">€249,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">28</td>
-                <td class="name">Drink tickets</td>
-                <td class="date">2017/11/01</td>
-                <td class="status">Confirmed</td>
-                <td class="price" data-order="199">€199,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">29</td>
-                <td class="name">Blue-Ray cover</td>
-                <td class="date">2018/03/15</td>
-                <td class="status">To Do</td>
-                <td class="price" data-order="1999">€1.999,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td class="orderNum">30</td>
-                <td class="name">TV carton</td>
-                <td class="date">2019/02/08</td>
-                <td class="status">Offer</td>
-                <td class="price" data-order="1369">€1.369,00</td>
-                <td>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="تعديل"><i class="fi-rr-edit"></i></a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="متابعة الطلب"> <i class=" fi-rr-time-forward"></i> </a>
-                  <a href="" data-toggle="tooltip" data-placement="top" title="حذف"><i class="fi-rr-trash"></i></a>
+                  <a><i class="fi-rr-eye"></i></a>
                 </td>
               </tr>
             </tbody>
@@ -592,19 +608,97 @@
   </div>
 
 
-  <script src="./assets/js/jquery-3.3.1.min.js"></script>
-  <script src="./assets/js/popper.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-  <script type="text/javascript"
-    src="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/cr-1.5.4/date-1.1.0/fc-3.3.3/fh-3.1.9/kt-2.6.2/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.4/sb-1.1.0/sp-1.3.0/sl-1.3.3/datatables.min.js"></script>
-  <script src="./assets/js/perfect-scrollbar.min.js"></script>
-  <script src="./assets/js/jquery.nice-select.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- modals -->
+    <div class="modal fade" id="chooseFixeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تعيين فني</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <select name="" id="" class="customSelect">
+                    <option value="" selected disabled>الفني</option>
+                    <option value="">عمر علي</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <input type="text" name="" placeholder="الكود" id="" class="form-control">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
+          <button type="button" class="btn btn-primary">حفظ</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src="./assets/js/main.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="delete-user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body ">
+          <i class="fas fa-trash"></i>
+          <h5>هل تريد الحدف بالتاكيد</h5>
+          <a href="" class="btn">نعم</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="order-complete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body ">
+          <h5 class="text-center">اكتمل الطلب</h5>
+          <form action="">
+            <div class="form-group">
+              <input type="text" name="" id="" class="form-control" placeholder="الكود">
+            </div>
+            <div class="form-group">
+              <input type="text" name="" id="" class="form-control" placeholder="الفني">
+            </div>
+            <div class="form-group">
+              <input type="text" name="" id="" class="form-control" placeholder="السعر">
+            </div>
+            <div class="col-sm-12 col-lg-12 text-center">
+              <a href="" class="btn-btn-sucsess">حفظ</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript"
+      src="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/cr-1.5.4/date-1.1.0/fc-3.3.3/fh-3.1.9/kt-2.6.2/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.4/sb-1.1.0/sp-1.3.0/sl-1.3.3/datatables.min.js"></script>
+    <script src="./assets/js/perfect-scrollbar.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
